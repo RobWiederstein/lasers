@@ -15,7 +15,7 @@
 #'   \item{state}{state when incident occurred}
 #' }
 #' @details
-#' Observations that were missing data were omitted.  Of the original 69,337 incidents, 66,558 were retained.  Altitude contained one observation of 1.3 million feet and it was omitted as an data entry error and classified as an outlier. Date and time were combined into a single column.
+#' Observations that were missing data were omitted.  Of the original 69,337 incidents, 66,558 were retained.  Altitude contained one observation of 1.3 million feet and it was omitted as an data entry error and classified as an outlier. The altitude record for a fixed-wing, manned aircraft is far less than 1.3 million. Date and time were combined into a single column.
 #'
 #' @source \url{https://www.faa.gov/about/initiatives/lasers/laws}
 "lasers"
