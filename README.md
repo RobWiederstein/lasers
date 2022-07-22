@@ -4,50 +4,49 @@
 # lasers
 
 <!-- badges: start -->
+
+[![Lifecycle:
+experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
-The goal of lasers is to …
+The goal of lasers is to make the FAA laser incidents data available.
 
-## Installation
+## Development Version
 
-You can install the development version of lasers like so:
+You can install the development version with the code below:
 
 ``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+# install.packages("devtools")
+devtools::install_github("RobWiederstein/lasers)
 ```
 
-## Example
-
-This is a basic example which shows you how to solve a common problem:
+## Usage
 
 ``` r
 library(lasers)
-## basic example code
+head(lasers) |> tibble::tibble()
+#> # A tibble: 6 × 9
+#>   date_time           flight_id aircraft altitude airport laser_color injury
+#>   <dttm>              <chr>     <fct>       <int> <chr>   <fct>       <chr> 
+#> 1 2022-01-01 01:05:00 AAL2305   Other       28000 ZMP     blue        no    
+#> 2 2022-01-01 01:09:00 EJA145    Other        2000 PBI     green       no    
+#> 3 2022-01-01 01:18:00 DAL1013   A320         1000 LAX     green       no    
+#> 4 2022-01-01 01:20:00 CFS7686   Other         700 PDX     multi       no    
+#> 5 2022-01-01 01:25:00 N500MH    Other        2000 TOA     green       no    
+#> 6 2022-01-01 01:30:00 N3386E    C172          800 MYF     green       no    
+#> # … with 2 more variables: city <chr>, state <chr>
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
+## Acknowledgements
 
-``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
-```
+Many thanks to the following persons, entities and agencies for making
+the project possible:
 
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this. You could also
-use GitHub Actions to re-render `README.Rmd` every time you push. An
-example workflow can be found here:
-<https://github.com/r-lib/actions/tree/v1/examples>.
+-   The U.S. Federal Aviation Administration
 
-You can also embed plots, for example:
+## Code of Conduct
 
-<img src="man/figures/README-pressure-1.png" width="100%" />
-
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.
+Please note that the lasers project is released with a [Contributor Code
+of
+Conduct](https://contributor-covenant.org/version/2/1/CODE_OF_CONDUCT.html).
+By contributing to this project, you agree to abide by its terms.
