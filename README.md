@@ -1,15 +1,17 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# lasers
+# lasers <img src="man/figures/hello.png" align="right" width="120" />
 
 <!-- badges: start -->
 
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![R-CMD-check](https://github.com/RobWiederstein/lasers/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/RobWiederstein/lasers/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-The goal of lasers is to make the FAA laser incidents data available.
+The goal of `lasers` is to make the FAA laser incidents data available
+in a more user-friendly format.
 
 ## Development Version
 
