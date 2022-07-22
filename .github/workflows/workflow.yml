@@ -1,10 +1,10 @@
 # R action templates can be found at https://github.com/r-lib/actions
 
 on:
-    push:
+  push:
     branches: [main]
     tags: '*.*.*'
-pull_request:
+  pull_request:
     branches: [main]
 
 name: primary-workflow
