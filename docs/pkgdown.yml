@@ -2,7 +2,7 @@ pandoc: 2.17.1.1
 pkgdown: 2.0.2
 pkgdown_sha: ~
 articles: {}
-last_built: 2022-07-22T03:40Z
+last_built: 2022-07-22T11:54Z
 urls:
   reference: https://robwiederstein.github.io/lasers/reference
   article: https://robwiederstein.github.io/lasers/articles

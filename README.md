@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# lasers <img src="man/figures/hello.png" align="right" width="120" />
+# lasers <img src="man/figures/logo.png" align="right" width="120" />
 
 <!-- badges: start -->
 
