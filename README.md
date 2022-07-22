@@ -11,7 +11,9 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 <!-- badges: end -->
 
 The goal of `lasers` is to make the FAA laser incidents data available
-in a more user-friendly format.
+in a more user-friendly format. The original data can be found on the
+FAA’s website
+[here](https://www.faa.gov/about/initiatives/reported-laser-incidents-2022).
 
 ## Development Version
 

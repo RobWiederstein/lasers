@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>/404.html</loc>
+    <loc>https://robwiederstein.github.io/lasers/404.html</loc>
   </url>
   <url>
-    <loc>/CODE_OF_CONDUCT.html</loc>
+    <loc>https://robwiederstein.github.io/lasers/CODE_OF_CONDUCT.html</loc>
   </url>
   <url>
-    <loc>/LICENSE-text.html</loc>
+    <loc>https://robwiederstein.github.io/lasers/LICENSE-text.html</loc>
   </url>
   <url>
-    <loc>/LICENSE.html</loc>
+    <loc>https://robwiederstein.github.io/lasers/LICENSE.html</loc>
   </url>
   <url>
-    <loc>/authors.html</loc>
+    <loc>https://robwiederstein.github.io/lasers/authors.html</loc>
   </url>
   <url>
-    <loc>/index.html</loc>
+    <loc>https://robwiederstein.github.io/lasers/index.html</loc>
   </url>
   <url>
-    <loc>/reference/hello.html</loc>
+    <loc>https://robwiederstein.github.io/lasers/reference/hello.html</loc>
   </url>
   <url>
-    <loc>/reference/index.html</loc>
+    <loc>https://robwiederstein.github.io/lasers/reference/index.html</loc>
   </url>
   <url>
-    <loc>/reference/lasers.html</loc>
+    <loc>https://robwiederstein.github.io/lasers/reference/lasers.html</loc>
   </url>
 </urlset>
