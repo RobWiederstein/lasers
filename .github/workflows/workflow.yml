@@ -1,98 +1,49 @@
-# R action templates can be found at https://github.com/r-lib/actions
-
+# Workflow derived from https://github.com/r-lib/actions/tree/v2/examples
+# Need help debugging build failures? Start at https://github.com/r-lib/actions#where-to-find-help
 on:
   push:
-    branches: [main]
-    tags: '*.*.*'
+    branches: [main, master]
   pull_request:
-    branches: [main]
+    branches: [main, master]
 
-name: primary-workflow
+name: R-CMD-check
 
 jobs:
-    primary-workflow:
-    runs-on: ubuntu-latest
-env:
-    GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
-    R_KEEP_PKG_SOURCE: yes
+  R-CMD-check:
+    runs-on: ${{ matrix.config.os }}
 
-steps:
+    name: ${{ matrix.config.os }} (${{ matrix.config.r }})
 
-    # see https://github.com/actions/checkout
-    - name: Checkout repo
-      uses: actions/checkout@v2
+    strategy:
+      fail-fast: false
+      matrix:
+        config:
+          - {os: macOS-latest,   r: 'release'}
+          - {os: windows-latest, r: 'release'}
+          - {os: ubuntu-latest,   r: 'devel', http-user-agent: 'release'}
+          - {os: ubuntu-latest,   r: 'release'}
+          - {os: ubuntu-latest,   r: 'oldrel-1'}
 
-# see https://github.com/r-lib/actions/tree/master/setup-r
-- name: Setup R
-  uses: r-lib/actions/setup-r@v1
-  with:
-    use-public-rspm: true
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      R_KEEP_PKG_SOURCE: yes
 
-# see pandoc https://github.com/r-lib/actions/tree/master/setup-pandoc
-- name: Install pandoc
-  uses: r-lib/actions/setup-pandoc@v1
+    steps:
+      - uses: actions/checkout@v2
 
-# see https://github.com/r-lib/actions/tree/master/setup-r-dependencies
-# install packages listed in DESCRIPTION
-- name: Install dependencies
-  uses: r-lib/actions/setup-r-dependencies@v1
-  with:
-    extra-packages: |
-      rcmdcheck
-      pkgdown
-      styler
-      lintr
-      covr
+      - uses: r-lib/actions/setup-pandoc@v2
 
-# see https://github.com/tidyverse/tidyverse/blob/main/.github/workflows/R-CMD-check.yaml
-- name: Inspect packages
-  run: |
-    options(width = 100)
-    pkgs <- installed.packages()[, "Package"]
-    sessioninfo::session_info(pkgs, include_base = TRUE)
-  shell: Rscript {0}
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: ${{ matrix.config.r }}
+          http-user-agent: ${{ matrix.config.http-user-agent }}
+          use-public-rspm: true
 
-- name: Update data
-  env:
-    FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
-  run: Rscript -e 'source("data-raw/fetch_datasets.R")'
+      - uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          extra-packages: any::rcmdcheck
+          needs: check
 
-# see https://github.com/r-lib/actions/tree/master/check-r-package
-- name:  R CMD check
-  uses: r-lib/actions/check-r-package@v1
-
-- name: Show testthat output
-  if: always()
-  run: find check -name 'testthat.Rout*' -exec cat '{}' \; || true
-  shell: bash
-
-# https://github.com/r-lib/actions/blob/master/examples/test-coverage.yaml
-- name: Test coverage
-  run: covr::codecov()
-  shell: Rscript {0}
-
-# see https://github.com/actions/upload-artifact
-- name: Upload check results
-  if: failure()
-  uses: actions/upload-artifact@main
-  with:
-    name: ${{ runner.os }}-r${{ matrix.config.r }}-results
-  path: check
-
-- name: Style Code
-  run: Rscript -e 'styler::style_pkg()'
-
-- name: Lint Code
-  run: lintr::lint_package()
-  shell: Rscript {0}
-
-# confirm pkg will build prior to docker actions
-- name: Build package
-  run: R CMD INSTALL .
-
-# see https://github.com/r-lib/actions/blob/f97616df3c9edac51d0ec265f6499b113e84b0cd/examples/pkgdown.yaml
-- name: Deploy package
-  run: |
-    git config --local user.email "actions@github.com"
-    git config --local user.name "GitHub Actions"
-    Rscript -e 'pkgdown::deploy_to_branch(new_process = FALSE)'
+      - uses: r-lib/actions/check-r-package@v2
+        with:
+          upload-snapshots: true
