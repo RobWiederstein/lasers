@@ -51,9 +51,18 @@ jobs:
           extra-packages: |
             any::rcmdcheck
             any::pkgdown
+            any::styler
+            any::lintr
           needs: check
 
       - name: R-CMD check
         uses: r-lib/actions/check-r-package@v2
         with:
           upload-snapshots: true
+
+      - name: Style Code
+        run: Rscript -e 'styler::style_pkg()'
+
+      - name: Lint Code
+        run: lintr::lint_package()
+        shell: Rscript {0}
