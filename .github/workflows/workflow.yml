@@ -50,7 +50,7 @@ jobs:
         with:
           extra-packages: |
             any::rcmdcheck
-            pkgdown
+            any::pkgdown
           needs: check
 
       - name: R-CMD check
