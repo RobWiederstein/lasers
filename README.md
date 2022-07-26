@@ -8,6 +8,7 @@
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![R-CMD-check](https://github.com/RobWiederstein/lasers/actions/workflows/workflow.yaml/badge.svg)](https://github.com/RobWiederstein/lasers/actions/workflows/R-CMD-check.yaml)
+[![R-CMD-check](https://github.com/RobWiederstein/lasers/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/RobWiederstein/lasers/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of `lasers` is to make the FAA laser incidents data available
@@ -32,12 +33,12 @@ head(lasers) |> tibble::tibble()
 #> # A tibble: 6 × 9
 #>   date_time           flight_id aircraft altitude airport laser_color injury
 #>   <dttm>              <chr>     <fct>       <int> <chr>   <fct>       <chr> 
-#> 1 2022-01-01 01:05:00 AAL2305   Other       28000 ZMP     blue        no    
-#> 2 2022-01-01 01:09:00 EJA145    Other        2000 PBI     green       no    
-#> 3 2022-01-01 01:18:00 DAL1013   A320         1000 LAX     green       no    
-#> 4 2022-01-01 01:20:00 CFS7686   Other         700 PDX     multi       no    
-#> 5 2022-01-01 01:25:00 N500MH    Other        2000 TOA     green       no    
-#> 6 2022-01-01 01:30:00 N3386E    C172          800 MYF     green       no    
+#> 1 2021-01-01 00:48:00 ASH6151   E75L         2000 SAV     green       no    
+#> 2 2021-01-01 00:56:00 SKW3321   E75L        17000 ZOA     green       no    
+#> 3 2021-01-01 01:02:00 ACO2204   Other        5000 DSM     green       no    
+#> 4 2021-01-01 01:25:00 AMF2521   Other        2000 ONT     green       no    
+#> 5 2021-01-01 01:40:00 N149MF    Other        4000 ZSE     green       no    
+#> 6 2021-01-01 02:15:00 NKS2412   Other        4000 F11     green       no    
 #> # … with 2 more variables: city <chr>, state <chr>
 ```
 
