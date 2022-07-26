@@ -1,7 +1,7 @@
 Package: lasers
 Type: Package
 Title: Data for Airplane Laser Incidents as Reported to the FAA
-Version: 0.1.0
+Version: 0.0.0.9000
 Author: Rob Wiederstein
 Maintainer: Rob Wiederstein <khuon68@gmail.com>
 Description: A dataset of laser incidents as reported by U.S. pilots to the Federal Aviation Admnistration.
