@@ -8,6 +8,8 @@
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![R-CMD-check](https://github.com/RobWiederstein/lasers/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/RobWiederstein/lasers/actions/workflows/R-CMD-check.yaml)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/lasers)](https://CRAN.R-project.org/package=lasers)
 <!-- badges: end -->
 
 The goal of `lasers` is to make the FAA laser incidents data available
