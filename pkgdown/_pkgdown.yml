@@ -2,7 +2,7 @@ url: https://robwiederstein.github.io/lasers
 
 template:
   bootstrap: 5
-  bootswatch: cerulean
+  bootswatch: vapor
 
 development:
   mode: auto
