@@ -2,7 +2,28 @@ url: https://robwiederstein.github.io/lasers
 
 template:
   bootstrap: 5
-  bootswatch: vapor
+  bootswatch: flatly
+
+authors:
+  Rob Wiederstein:
+    href: https://robwiederstein.org
 
 development:
   mode: auto
+
+navbar:
+  type: light
+  left:
+    - text: "Reference"
+      href: "reference/index.html"
+    - text: "Changelog"
+      href: "news/index.html"
+  right:
+    - icon: fa-github fa-lg
+      href: https://github.com/robwiederstein/lasers
+
+reference:
+  - title: "Data"
+    #desc: "FAA Laser Incident Data 2011 - 2021"
+    contents:
+    - lasers

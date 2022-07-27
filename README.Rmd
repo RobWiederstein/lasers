@@ -23,9 +23,11 @@ knitr::opts_chunk$set(
 [![CRAN status](https://www.r-pkg.org/badges/version/lasers)](https://CRAN.R-project.org/package=lasers)
 <!-- badges: end -->
 
+## Overview
+
 The goal of `lasers` is to make the FAA laser incidents data available in a more user-friendly format. The original data can be found on the FAA's website [here](https://www.faa.gov/about/initiatives/reported-laser-incidents-2022).
 
-## Development Version
+## Installation
 
 You can install the development version with the code below:
 
@@ -38,8 +40,6 @@ devtools::install_github("RobWiederstein/lasers)
 
 ```{r, usage}
 library(lasers)
-head(lasers) |> tibble::tibble()
-
 ```
 
 ## Acknowledgements
