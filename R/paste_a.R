@@ -5,7 +5,6 @@
 #' @param  text a string
 #'
 #' @return a character string
-#' @export
 #'
 #' @examples
 #' paste_a("some_string")
