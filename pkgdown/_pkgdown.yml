@@ -2,7 +2,9 @@ url: https://robwiederstein.github.io/lasers
 
 template:
   bootstrap: 5
-  bootswatch: flatly
+  bootswatch: lux
+  bslib:
+    pkgdown-nav-height: 100px
 
 authors:
   Rob Wiederstein:
