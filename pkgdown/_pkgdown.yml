@@ -14,7 +14,6 @@ development:
   mode: auto
 
 navbar:
-  type: light
   left:
     - text: "Reference"
       href: "reference/index.html"
