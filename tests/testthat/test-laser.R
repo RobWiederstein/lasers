@@ -5,5 +5,5 @@ test_that("lasers have no missing values", {
     expect_true(all(is.na(lasers)) == F)
 })
 test_that("lasers have more than 63036 obs", {
-    expect_gte(nrow(lasers), 63036)
+    expect_equal(nrow(lasers), 63036)
 })
