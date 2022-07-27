@@ -5,6 +5,9 @@ template:
   bootswatch: lux
   bslib:
     pkgdown-nav-height: 100px
+    base_font: {google: "Roboto"}
+    heading_font: {google: "Roboto Slab"}
+    code_font: {google: "Roboto Mono"}
 
 authors:
   Rob Wiederstein:
