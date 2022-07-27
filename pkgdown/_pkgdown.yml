@@ -26,6 +26,6 @@ reference:
   - title: "Data"
     contents:
     - lasers
-  # - title: "Functions"
-  #   contents:
-  #   - paste_a
+  - title: "Functions"
+    contents:
+    - paste_a

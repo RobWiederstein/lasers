@@ -10,7 +10,7 @@ paste_a(text)
 \item{text}{a string}
 }
 \value{
-text
+a character string
 }
 \description{
 Pastes a to front of string
