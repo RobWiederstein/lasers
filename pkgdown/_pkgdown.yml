@@ -24,6 +24,5 @@ navbar:
 
 reference:
   - title: "Data"
-    #desc: "FAA Laser Incident Data 2011 - 2021"
     contents:
     - lasers

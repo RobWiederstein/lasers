@@ -10,6 +10,8 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 [![R-CMD-check](https://github.com/RobWiederstein/lasers/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/RobWiederstein/lasers/actions/workflows/R-CMD-check.yaml)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/lasers)](https://CRAN.R-project.org/package=lasers)
+[![Codecov test
+coverage](https://codecov.io/gh/RobWiederstein/lasers/branch/main/graph/badge.svg)](https://app.codecov.io/gh/RobWiederstein/lasers?branch=main)
 <!-- badges: end -->
 
 ## Overview
